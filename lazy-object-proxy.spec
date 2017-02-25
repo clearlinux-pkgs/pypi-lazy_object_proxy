@@ -4,7 +4,7 @@
 #
 Name     : lazy-object-proxy
 Version  : 1.2.2
-Release  : 8
+Release  : 9
 URL      : http://pypi.debian.net/lazy-object-proxy/lazy-object-proxy-1.2.2.tar.gz
 Source0  : http://pypi.debian.net/lazy-object-proxy/lazy-object-proxy-1.2.2.tar.gz
 Summary  : A fast and thorough lazy object proxy.
@@ -52,12 +52,12 @@ python components for the lazy-object-proxy package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1488042867
+export SOURCE_DATE_EPOCH=1488044519
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1488042867
+export SOURCE_DATE_EPOCH=1488044519
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
