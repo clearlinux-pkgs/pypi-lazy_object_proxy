@@ -4,13 +4,14 @@
 #
 Name     : lazy-object-proxy
 Version  : 1.3.1
-Release  : 14
+Release  : 15
 URL      : http://pypi.debian.net/lazy-object-proxy/lazy-object-proxy-1.3.1.tar.gz
 Source0  : http://pypi.debian.net/lazy-object-proxy/lazy-object-proxy-1.3.1.tar.gz
 Summary  : A fast and thorough lazy object proxy.
 Group    : Development/Tools
 License  : BSD-2-Clause
 Requires: lazy-object-proxy-legacypython
+Requires: lazy-object-proxy-python3
 Requires: lazy-object-proxy-python
 Requires: Sphinx
 BuildRequires : pbr
@@ -35,6 +36,7 @@ Overview
 %package legacypython
 Summary: legacypython components for the lazy-object-proxy package.
 Group: Default
+Requires: python-core
 
 %description legacypython
 legacypython components for the lazy-object-proxy package.
@@ -44,9 +46,19 @@ legacypython components for the lazy-object-proxy package.
 Summary: python components for the lazy-object-proxy package.
 Group: Default
 Requires: lazy-object-proxy-legacypython
+Requires: lazy-object-proxy-python3
 
 %description python
 python components for the lazy-object-proxy package.
+
+
+%package python3
+Summary: python3 components for the lazy-object-proxy package.
+Group: Default
+Requires: python3-core
+
+%description python3
+python3 components for the lazy-object-proxy package.
 
 
 %prep
@@ -57,12 +69,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1505365003
+export SOURCE_DATE_EPOCH=1507155980
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1505365003
+export SOURCE_DATE_EPOCH=1507155980
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -78,5 +90,8 @@ echo ----[ mark ]----
 /usr/lib/python2*/*
 
 %files python
+%defattr(-,root,root,-)
+
+%files python3
 %defattr(-,root,root,-)
 /usr/lib/python3*/*
