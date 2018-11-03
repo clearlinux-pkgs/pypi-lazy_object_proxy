@@ -4,23 +4,20 @@
 #
 Name     : lazy-object-proxy
 Version  : 1.3.1
-Release  : 27
+Release  : 28
 URL      : http://pypi.debian.net/lazy-object-proxy/lazy-object-proxy-1.3.1.tar.gz
 Source0  : http://pypi.debian.net/lazy-object-proxy/lazy-object-proxy-1.3.1.tar.gz
 Summary  : A fast and thorough lazy object proxy.
 Group    : Development/Tools
 License  : BSD-2-Clause
-Requires: lazy-object-proxy-python3
-Requires: lazy-object-proxy-python
+Requires: lazy-object-proxy-license = %{version}-%{release}
+Requires: lazy-object-proxy-python = %{version}-%{release}
+Requires: lazy-object-proxy-python3 = %{version}-%{release}
 Requires: Sphinx
-BuildRequires : pbr
-BuildRequires : pip
+BuildRequires : buildreq-distutils3
 BuildRequires : pluggy
 BuildRequires : py-python
 BuildRequires : pytest
-
-BuildRequires : python3-dev
-BuildRequires : setuptools
 BuildRequires : tox
 BuildRequires : virtualenv
 
@@ -32,10 +29,18 @@ Overview
         
         A fast and thorough lazy object proxy.
 
+%package license
+Summary: license components for the lazy-object-proxy package.
+Group: Default
+
+%description license
+license components for the lazy-object-proxy package.
+
+
 %package python
 Summary: python components for the lazy-object-proxy package.
 Group: Default
-Requires: lazy-object-proxy-python3
+Requires: lazy-object-proxy-python3 = %{version}-%{release}
 
 %description python
 python components for the lazy-object-proxy package.
@@ -58,18 +63,24 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523290981
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1541267732
+python3 setup.py build
 
 %install
 rm -rf %{buildroot}
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/lazy-object-proxy
+cp LICENSE %{buildroot}/usr/share/package-licenses/lazy-object-proxy/LICENSE
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/lazy-object-proxy/LICENSE
 
 %files python
 %defattr(-,root,root,-)
