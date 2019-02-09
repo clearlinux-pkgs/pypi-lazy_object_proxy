@@ -4,7 +4,7 @@
 #
 Name     : lazy-object-proxy
 Version  : 1.3.1
-Release  : 29
+Release  : 30
 URL      : http://pypi.debian.net/lazy-object-proxy/lazy-object-proxy-1.3.1.tar.gz
 Source0  : http://pypi.debian.net/lazy-object-proxy/lazy-object-proxy-1.3.1.tar.gz
 Summary  : A fast and thorough lazy object proxy.
@@ -13,7 +13,6 @@ License  : BSD-2-Clause
 Requires: lazy-object-proxy-license = %{version}-%{release}
 Requires: lazy-object-proxy-python = %{version}-%{release}
 Requires: lazy-object-proxy-python3 = %{version}-%{release}
-Requires: Sphinx
 BuildRequires : buildreq-distutils3
 BuildRequires : pluggy
 BuildRequires : py-python
@@ -22,12 +21,21 @@ BuildRequires : tox
 BuildRequires : virtualenv
 
 %description
+========
 Overview
-        ========
-        
-        
-        
-        A fast and thorough lazy object proxy.
+========
+.. start-badges
+.. list-table::
+:stub-columns: 1
+* - docs
+- |docs|
+* - tests
+- | |travis| |appveyor| |requires|
+| |coveralls| |codecov|
+| |landscape| |scrutinizer| |codacy| |codeclimate|
+* - package
+- | |version| |wheel| |supported-versions| |supported-implementations|
+| |commits-since|
 
 %package license
 Summary: license components for the lazy-object-proxy package.
@@ -63,7 +71,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541267732
+export SOURCE_DATE_EPOCH=1549686948
+export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install
