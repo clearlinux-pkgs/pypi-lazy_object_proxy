@@ -4,7 +4,7 @@
 #
 Name     : lazy-object-proxy
 Version  : 1.4.3
-Release  : 39
+Release  : 40
 URL      : https://files.pythonhosted.org/packages/07/3f/a3d687f83c7d44970f70ff0400677746c8860b11f0c08f6b4e07205f0cdc/lazy-object-proxy-1.4.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/07/3f/a3d687f83c7d44970f70ff0400677746c8860b11f0c08f6b4e07205f0cdc/lazy-object-proxy-1.4.3.tar.gz
 Summary  : A fast and thorough lazy object proxy.
@@ -67,6 +67,7 @@ python components for the lazy-object-proxy package.
 Summary: python3 components for the lazy-object-proxy package.
 Group: Default
 Requires: python3-core
+Provides: pypi(lazy-object-proxy)
 
 %description python3
 python3 components for the lazy-object-proxy package.
@@ -74,13 +75,14 @@ python3 components for the lazy-object-proxy package.
 
 %prep
 %setup -q -n lazy-object-proxy-1.4.3
+cd %{_builddir}/lazy-object-proxy-1.4.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1572186849
+export SOURCE_DATE_EPOCH=1583166044
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
