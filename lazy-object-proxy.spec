@@ -4,7 +4,7 @@
 #
 Name     : lazy-object-proxy
 Version  : 1.4.3
-Release  : 40
+Release  : 41
 URL      : https://files.pythonhosted.org/packages/07/3f/a3d687f83c7d44970f70ff0400677746c8860b11f0c08f6b4e07205f0cdc/lazy-object-proxy-1.4.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/07/3f/a3d687f83c7d44970f70ff0400677746c8860b11f0c08f6b4e07205f0cdc/lazy-object-proxy-1.4.3.tar.gz
 Summary  : A fast and thorough lazy object proxy.
@@ -28,23 +28,12 @@ BuildRequires : util-linux
 BuildRequires : virtualenv
 
 %description
-========
 Overview
-========
-.. start-badges
-.. list-table::
-:stub-columns: 1
-* - docs
-- |docs|
-* - tests
-- | |travis| |appveyor| |requires|
-| |coveralls| |codecov|
-* - package
-- | |version| |wheel| |supported-versions| |supported-implementations|
-| |commits-since|
-.. |docs| image:: https://readthedocs.org/projects/python-lazy-object-proxy/badge/?style=flat
-:target: https://readthedocs.org/projects/python-lazy-object-proxy
-:alt: Documentation Status
+        ========
+        
+        
+        
+        A fast and thorough lazy object proxy.
 
 %package license
 Summary: license components for the lazy-object-proxy package.
@@ -67,7 +56,7 @@ python components for the lazy-object-proxy package.
 Summary: python3 components for the lazy-object-proxy package.
 Group: Default
 Requires: python3-core
-Provides: pypi(lazy-object-proxy)
+Provides: pypi(lazy_object_proxy)
 
 %description python3
 python3 components for the lazy-object-proxy package.
@@ -82,8 +71,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583166044
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1583529128
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
