@@ -4,7 +4,7 @@
 #
 Name     : lazy-object-proxy
 Version  : 1.5.2
-Release  : 46
+Release  : 47
 URL      : https://files.pythonhosted.org/packages/95/b7/8823606ab25245effb6907fd7699f2234ae0bbd39e0c7b10b84def966f45/lazy-object-proxy-1.5.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/95/b7/8823606ab25245effb6907fd7699f2234ae0bbd39e0c7b10b84def966f45/lazy-object-proxy-1.5.2.tar.gz
 Summary  : A fast and thorough lazy object proxy.
