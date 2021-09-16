@@ -1,5 +1,5 @@
 PKG_NAME := lazy-object-proxy
-URL = https://files.pythonhosted.org/packages/95/b7/8823606ab25245effb6907fd7699f2234ae0bbd39e0c7b10b84def966f45/lazy-object-proxy-1.5.2.tar.gz
+URL = https://files.pythonhosted.org/packages/bb/f5/646893a04dcf10d4acddb61c632fd53abb3e942e791317dcdd57f5800108/lazy-object-proxy-1.6.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
