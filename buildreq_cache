@@ -1,2 +1,6 @@
 1.6.0
-setuptools_scm-python
+pypi(importlib_metadata)
+pypi(pip)
+pypi(six)
+pypi(twine)
+pypi(virtualenv)
