@@ -4,7 +4,7 @@
 #
 Name     : pypi-lazy_object_proxy
 Version  : 1.6.0
-Release  : 57
+Release  : 58
 URL      : https://files.pythonhosted.org/packages/bb/f5/646893a04dcf10d4acddb61c632fd53abb3e942e791317dcdd57f5800108/lazy-object-proxy-1.6.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/bb/f5/646893a04dcf10d4acddb61c632fd53abb3e942e791317dcdd57f5800108/lazy-object-proxy-1.6.0.tar.gz
 Summary  : A fast and thorough lazy object proxy.
@@ -14,19 +14,19 @@ Requires: pypi-lazy_object_proxy-license = %{version}-%{release}
 Requires: pypi-lazy_object_proxy-python = %{version}-%{release}
 Requires: pypi-lazy_object_proxy-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-BuildRequires : pluggy
-BuildRequires : py-python
 BuildRequires : pypi(importlib_metadata)
 BuildRequires : pypi(pip)
+BuildRequires : pypi(py)
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi(setuptools_scm)
 BuildRequires : pypi(six)
 BuildRequires : pypi(twine)
 BuildRequires : pypi(virtualenv)
 BuildRequires : pypi(wheel)
-BuildRequires : pytest
-BuildRequires : tox
-BuildRequires : virtualenv
+BuildRequires : pypi-pluggy
+BuildRequires : pypi-pytest
+BuildRequires : pypi-tox
+BuildRequires : pypi-virtualenv
 Patch1: deps.patch
 
 %description
@@ -59,11 +59,6 @@ Summary: python3 components for the pypi-lazy_object_proxy package.
 Group: Default
 Requires: python3-core
 Provides: pypi(lazy_object_proxy)
-Requires: pypi(importlib_metadata)
-Requires: pypi(pip)
-Requires: pypi(six)
-Requires: pypi(twine)
-Requires: pypi(virtualenv)
 
 %description python3
 python3 components for the pypi-lazy_object_proxy package.
@@ -79,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641513552
+export SOURCE_DATE_EPOCH=1644190962
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
