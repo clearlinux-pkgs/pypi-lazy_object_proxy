@@ -1,6 +1,0 @@
-1.6.0
-pypi(importlib_metadata)
-pypi(pip)
-pypi(six)
-pypi(twine)
-pypi(virtualenv)
