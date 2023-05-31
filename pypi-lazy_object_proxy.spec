@@ -5,7 +5,7 @@
 #
 Name     : pypi-lazy_object_proxy
 Version  : 1.9.0
-Release  : 72
+Release  : 73
 URL      : https://files.pythonhosted.org/packages/20/c0/8bab72a73607d186edad50d0168ca85bd2743cfc55560c9d721a94654b20/lazy-object-proxy-1.9.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/20/c0/8bab72a73607d186edad50d0168ca85bd2743cfc55560c9d721a94654b20/lazy-object-proxy-1.9.0.tar.gz
 Summary  : A fast and thorough lazy object proxy.
@@ -17,10 +17,12 @@ BuildRequires : buildreq-distutils3
 BuildRequires : pypi(pip)
 BuildRequires : pypi(py)
 BuildRequires : pypi(setuptools)
+BuildRequires : pypi(setuptools_scm)
 BuildRequires : pypi(six)
 BuildRequires : pypi(tox)
 BuildRequires : pypi(twine)
 BuildRequires : pypi(virtualenv)
+BuildRequires : pypi(wheel)
 BuildRequires : pypi-pluggy
 BuildRequires : pypi-pytest
 BuildRequires : pypi-tox
@@ -63,7 +65,6 @@ Group: Default
 Requires: python3-core
 Provides: pypi(lazy_object_proxy)
 Requires: pypi(pip)
-Requires: pypi(setuptools)
 Requires: pypi(six)
 Requires: pypi(tox)
 Requires: pypi(twine)
@@ -85,7 +86,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683040298
+export SOURCE_DATE_EPOCH=1685556398
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
