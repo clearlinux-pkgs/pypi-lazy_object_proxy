@@ -7,7 +7,7 @@
 #
 Name     : pypi-lazy_object_proxy
 Version  : 1.10.0
-Release  : 77
+Release  : 78
 URL      : https://files.pythonhosted.org/packages/2c/f0/f02e2d150d581a294efded4020094a371bbab42423fe78625ac18854d89b/lazy-object-proxy-1.10.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/2c/f0/f02e2d150d581a294efded4020094a371bbab42423fe78625ac18854d89b/lazy-object-proxy-1.10.0.tar.gz
 Summary  : A fast and thorough lazy object proxy.
